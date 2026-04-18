@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Palette Generator — #19 of 100 Projects</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-wrapper">
+    <header>
+      <div class="badge">#19 / 100 Projects</div>
+      <h1>Color Palette Generator</h1>
+      <p class="subtitle">Press <kbd>Space</kbd> or Generate — lock swatches to keep them</p>
+    </header>
+
+    <div class="controls-bar">
+      <div class="palette-type-group">
+        <label for="palette-type">Palette type</label>
+        <select id="palette-type">
+          <option value="random">Random</option>
+          <option value="monochromatic">Monochromatic</option>
+          <option value="complementary">Complementary</option>
+          <option value="analogous">Analogous</option>
+          <option value="triadic">Triadic</option>
+        </select>
+      </div>
+      <button id="btn-generate" class="btn btn-primary">Generate</button>
+      <button id="btn-export" class="btn btn-secondary">Export HEX</button>
+    </div>
+
+    <main class="swatches-container" id="swatches-container">
+      <!-- swatches rendered by JS -->
+    </main>
+
+    <section class="history-section">
+      <h3>Recent Palettes</h3>
+      <div class="history-list" id="history-list">
+        <p class="empty-history">No history yet — generate a palette!</p>
+      </div>
+    </section>
+
+    <div class="toast" id="toast"></div>
+
+    <footer>Part of <a href="https://github.com/manzi" target="_blank" rel="noopener">Manzi's 100 GitHub Projects Roadmap</a></footer>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
